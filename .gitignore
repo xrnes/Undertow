@@ -1,0 +1,12 @@
+# Godot 4 specific overrides
+.godot/
+*.translation
+
+# System / Cache files
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Blender automatic backups
+*.blend1
+*.blend2

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dy5kovk254rp0"]
+
+[ext_resource type="Script" uid="uid://gsigbhs6c6ks" path="res://inspect_overlay.gd" id="1_h1raf"]
+[ext_resource type="Texture2D" uid="uid://btbdxk83cfmfu" path="res://44EEB786-C232-443D-86FB-9E37B37E9F0A.jpg" id="2_wgvho"]
+
+[node name="InspectOverlay" type="CanvasLayer" unique_id=1309475417]
+process_mode = 3
+script = ExtResource("1_h1raf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=913437297]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1242.0
+offset_top = -1104.0
+offset_bottom = 1104.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_wgvho")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=312651068]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -302.0
+offset_top = -84.0
+offset_right = 245.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_stretch_ratio = 11.08
+text = "															ddadd"
+fit_content = true

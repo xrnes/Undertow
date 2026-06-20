@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ciqf4xsfgl3ku"]
+
+[ext_resource type="PackedScene" uid="uid://ljo71kkqh8cu" path="res://rough models/saloon_spawn/barroom1.glb" id="1_4t708"]
+[ext_resource type="Script" uid="uid://nlwe52e6df1c" path="res://Scripts/camera_region.gd" id="2_j2vsr"]
+[ext_resource type="Script" uid="uid://c3gkx302nm3b0" path="res://Scripts/Roomtel.gd" id="2_nymlx"]
+[ext_resource type="PackedScene" uid="uid://dcmredylnclqy" path="res://Scenes/props_functions/door.tscn" id="3_nymlx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6kocw"]
+size = Vector3(0.93120575, 0.21313477, 1.1096196)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nymlx"]
+size = Vector3(0.65296745, 0.21313477, 0.52764904)
+
+[node name="barroom1" unique_id=810760017 instance=ExtResource("1_4t708")]
+script = ExtResource("2_nymlx")
+
+[node name="Camera3" type="Area3D" parent="." index="12" unique_id=601544675 node_paths=PackedStringArray("region_camera")]
+transform = Transform3D(-0.0008203089, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -0.0008203089, -1.097858, 0, 4.7348495)
+script = ExtResource("2_j2vsr")
+region_camera = NodePath("Camera3D2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3" index="0" unique_id=2102762663]
+transform = Transform3D(7.617735, 0, 0, 0, 4.771346, 0, 7.543713e-08, 0, 5.1937, -9.177618, 0.712221, -7.158326)
+shape = SubResource("BoxShape3D_6kocw")
+
+[node name="Camera3D2" type="Camera3D" parent="Camera3" index="1" unique_id=235273884]
+transform = Transform3D(0.36992532, -0.54608923, 0.75162625, -4.209041e-08, 0.8090165, 0.58778584, -0.92906165, -0.21743686, 0.2992757, -5.501141, 5.064837, -4.488389)
+current = true
+fov = 60.0
+
+[node name="SaloonBed1" parent="." index="13" unique_id=2012075749 instance=ExtResource("3_nymlx")]
+transform = Transform3D(4.4072313, 0, 0, 0, 6.9754205, 0, 0, 0, 1.525142, 8.821133, -0.2726283, -4.3273153)
+next_room_path = "uid://cfw2dy1t8ch0f"
+destination_door_name = "SaloonBed1"
+
+[node name="SaloonBedroom1" type="Marker3D" parent="." index="14" unique_id=1024730744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.109381, 0.21311924, -4.3102636)
+
+[node name="Camera4" type="Area3D" parent="." index="17" unique_id=330926750 node_paths=PackedStringArray("region_camera")]
+transform = Transform3D(-0.0008203089, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -0.0008203089, -2.1257262, 0, 4.7348495)
+script = ExtResource("2_j2vsr")
+region_camera = NodePath("Camera3D2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera4" index="0" unique_id=699400787]
+transform = Transform3D(7.6179175, 0, 0, 0, 4.771346, 0, 9.639189e-08, 0, 5.1937, -7.4574537, 0.712221, -3.5323083)
+shape = SubResource("BoxShape3D_nymlx")
+
+[node name="Camera3D2" type="Camera3D" parent="Camera4" index="1" unique_id=890498150]
+transform = Transform3D(-0.64678985, -0.63228077, 0.4264788, 0, 0.5591929, 0.82903767, -0.76266843, 0.53621304, -0.3616803, -5.844344, 5.064837, -4.4881086)
+current = true
+fov = 60.0

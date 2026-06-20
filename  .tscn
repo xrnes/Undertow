@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ch0clt48fad0i"]
+
+[ext_resource type="Script" uid="uid://dauu8o5sifqoj" path="res://inventoryui.gd" id="1_y8q35"]
+
+[node name="InventoryUI" type="CanvasLayer" unique_id=246827146]
+process_mode = 3
+script = ExtResource("1_y8q35")
+
+[node name="Panel" type="Panel" parent="." unique_id=484202502]
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.062000003
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=205719850]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Catagorys" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=15209518]
+layout_mode = 2
+
+[node name="Items" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=1682145267]
+layout_mode = 2

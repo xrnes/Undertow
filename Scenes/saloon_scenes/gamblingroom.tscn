@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://b05t15t22bmqw"]
+
+[ext_resource type="PackedScene" uid="uid://6xn3f5jhshcm" path="res://rough models/saloon_spawn/gamblingroom.glb" id="1_m2l5h"]
+[ext_resource type="Script" uid="uid://nlwe52e6df1c" path="res://Scripts/camera_region.gd" id="2_t5hbx"]
+[ext_resource type="PackedScene" uid="uid://dcmredylnclqy" path="res://Scenes/props_functions/door.tscn" id="3_uee8d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uee8d"]
+size = Vector3(0.85208976, 0.21313477, 0.4917298)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sebrn"]
+size = Vector3(0.45526612, 0.21313477, 0.62135315)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fqjbr"]
+size = Vector3(0.40369987, 0.21313477, 1.0587463)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ausn0"]
+size = Vector3(0.2604437, 0.21313477, 0.7120247)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cwmip"]
+size = Vector3(1.0154004, 0.21313477, 0.4917298)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_trg7t"]
+size = Vector3(0.5319263, 0.21313477, 0.4917298)
+
+[node name="gamblingroom" unique_id=147206783 instance=ExtResource("1_m2l5h")]
+
+[node name="Camera3" type="Area3D" parent="." index="24" unique_id=315278592 node_paths=PackedStringArray("region_camera")]
+transform = Transform3D(-0.0008203089, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -0.0008203089, -1.3031583, 0, 3.894075)
+script = ExtResource("2_t5hbx")
+region_camera = NodePath("Camera3D2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3" index="0" unique_id=1783453369]
+transform = Transform3D(7.6179776, 0, 0, 0, 4.771346, 0, 1.0384247e-07, 0, 5.1937, -7.15444, 0.712221, -8.681457)
+shape = SubResource("BoxShape3D_uee8d")
+
+[node name="Camera3D2" type="Camera3D" parent="Camera3" index="1" unique_id=902820933]
+transform = Transform3D(0.6768757, 0.20289609, -0.7075823, 0, 0.9612617, 0.2756375, 0.7360976, -0.18657234, 0.65065455, -10.903745, 3.6869612, -2.5748801)
+current = true
+fov = 60.0
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Camera3" index="2" unique_id=36288941]
+transform = Transform3D(7.61808, 0, 0, 0, 4.771346, 0, 1.1594966e-07, 0, 5.1937, -7.148821, 0.712221, -5.284163)
+shape = SubResource("BoxShape3D_sebrn")
+
+[node name="Camera4" type="Area3D" parent="." index="25" unique_id=1217913926 node_paths=PackedStringArray("region_camera")]
+transform = Transform3D(-0.0008203089, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -0.0008203089, -1.3031583, 0, 3.894075)
+script = ExtResource("2_t5hbx")
+region_camera = NodePath("Camera3D2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera4" index="0" unique_id=1783052123]
+transform = Transform3D(7.6179023, 0, 0, 0, 4.771346, 0, 9.49949e-08, 0, 5.1937, -10.957689, 0.712221, -3.2698326)
+shape = SubResource("BoxShape3D_fqjbr")
+
+[node name="Camera3D2" type="Camera3D" parent="Camera4" index="1" unique_id=1470661134]
+transform = Transform3D(0.9460853, -0.28052077, 0.1619587, 0, 0.5, 0.86602545, -0.3239174, -0.8193341, 0.47304264, -10.888113, 5.369867, -1.0850933)
+current = true
+fov = 60.0
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Camera4" index="2" unique_id=693616635]
+transform = Transform3D(7.6180015, 0, 0, 0, 4.771346, 0, 1.06636435e-07, 0, 5.1937, -11.616929, 0.712221, -8.264364)
+shape = SubResource("BoxShape3D_ausn0")
+
+[node name="Camera5" type="Area3D" parent="." index="26" unique_id=1063961359 node_paths=PackedStringArray("region_camera")]
+transform = Transform3D(-0.0008203089, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -0.0008203089, -1.3031583, 0, 3.894075)
+script = ExtResource("2_t5hbx")
+region_camera = NodePath("Camera3D2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera5" index="0" unique_id=854668417]
+transform = Transform3D(7.618001, 0, 0, 0, 4.771346, 0, 1.0617077e-07, 0, 5.1937, -4.7248645, 0.712221, -2.0917668)
+shape = SubResource("BoxShape3D_cwmip")
+
+[node name="Camera3D2" type="Camera3D" parent="Camera5" index="1" unique_id=510118386]
+transform = Transform3D(-0.9664613, -0.07078732, 0.24686414, -4.2778893e-08, 0.96126163, 0.27563778, -0.2568127, 0.2663932, -0.92902213, -2.798101, 3.7748513, -7.6970425)
+current = true
+fov = 60.0
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Camera5" index="2" unique_id=2135855860]
+transform = Transform3D(7.6180944, 0, 0, 0, 4.771346, 0, 1.17346644e-07, 0, 5.1937, -2.8856318, 0.712221, -4.9330506)
+shape = SubResource("BoxShape3D_trg7t")
+
+[node name="Up Door5" parent="." index="27" unique_id=2012075749 instance=ExtResource("3_uee8d")]
+transform = Transform3D(4.4072313, 0, 0, 0, 6.9754205, 0, 0, 0, 1.525142, 8.891385, 0.173038, -4.294618)
+next_room_path = ""
+destination_door_name = ""
+
+[node name="gamblingdoor" type="Marker3D" parent="." index="28" unique_id=1762781152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.238719, 0.24316883, -4.275896)

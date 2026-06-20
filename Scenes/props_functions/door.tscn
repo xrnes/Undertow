@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dcmredylnclqy"]
+
+[ext_resource type="Script" uid="uid://dh3nivd8yntv1" path="res://Scripts/door.gd" id="1_w6aom"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p0e35"]
+
+[node name="door" type="Area3D" unique_id=2012075749]
+collision_layer = 0
+script = ExtResource("1_w6aom")
+next_room_path = null
+destination_door_name = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=346613855]
+transform = Transform3D(0.33653426, 0, 0, 0, 0.18437521, 0, 0, 0, 1, 0, 0.08414507, 0)
+shape = SubResource("BoxShape3D_p0e35")
+debug_color = Color(0.19215687, 0.6862745, 0.98039216, 1)

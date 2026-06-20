@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c5xwftpm43so0"]
+
+[ext_resource type="Script" uid="uid://7pio4flreui2" path="res://Scripts/autoload_scripts/transition_manager.gd" id="1_k4t0e"]
+
+[node name="TransitionManager" type="CanvasLayer" unique_id=1307339750]
+layer = 100
+script = ExtResource("1_k4t0e")
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=994928487]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SoundPlayer" type="AudioStreamPlayer" parent="." unique_id=1096167175]
